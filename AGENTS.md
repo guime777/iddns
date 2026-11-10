@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- The site is a single landing page at `/` composed of section components in `src/components/site/`; header links use in-page anchors because the brief asks for one page with smooth scrolling.
+- Church facts (address, PIX, service times, social links) live only in `src/lib/church.ts` so every section and the footer stay in sync.
