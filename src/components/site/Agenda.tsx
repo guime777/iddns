@@ -53,7 +53,7 @@ export function Agenda() {
   const [open, setOpen] = useState<Poster | null>(null);
 
   return (
-    <section aria-labelledby="agenda-title" className="overflow-hidden py-24 sm:py-32">
+    <section aria-labelledby="agenda-title" className="overflow-hidden pb-24 pt-12 sm:pb-32 sm:pt-16">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
