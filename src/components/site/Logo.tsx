@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-iddns.png.asset.json";
+import logo from "@/assets/logo-iddns-hd.png.asset.json";
 import { cn } from "@/lib/utils";
 
 /** Logo oficial da IDDNS. Fundo transparente, feito para fundos escuros. */
@@ -7,8 +7,8 @@ export function Logo({ className }: { className?: string }) {
     <img
       src={logo.url}
       alt="IDDNS — Igreja Deus das Nações"
-      width={132}
-      height={50}
+      width={344}
+      height={128}
       className={cn("h-11 w-auto select-none", className)}
       draggable={false}
     />

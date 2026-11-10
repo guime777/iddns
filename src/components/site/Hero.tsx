@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 
-import heroImg from "@/assets/hero-worship.jpg";
+import heroPhoto from "@/assets/photos/hero-santa-ceia.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -21,10 +21,10 @@ export function Hero() {
       className="relative isolate flex min-h-[90vh] items-center justify-center overflow-hidden"
     >
       <motion.img
-        src={heroImg}
-        alt="Pessoas adorando com as mãos levantadas durante um culto, sob luzes azuis e douradas"
+        src={heroPhoto.url}
+        alt="Mesa da Santa Ceia com pão, uvas e cálices enquanto o ministro de louvor canta com o violão ao fundo"
         width={1920}
-        height={1088}
+        height={1080}
         fetchPriority="high"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
         initial={reduce ? false : { scale: 1.08 }}

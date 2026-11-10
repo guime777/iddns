@@ -4,6 +4,7 @@ import { Expand } from "lucide-react";
 import consagracao from "@/assets/flyers/consagracao-sabado.jpg.asset.json";
 import flix from "@/assets/flyers/iddnsflix-estudo.jpg.asset.json";
 import instituto from "@/assets/flyers/instituto-das-nacoes.jpg.asset.json";
+import midia from "@/assets/flyers/ministerio-de-midia.jpg.asset.json";
 import oferte from "@/assets/flyers/oferte-ao-senhor.jpg.asset.json";
 import santaCeia from "@/assets/flyers/santa-ceia.jpg.asset.json";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -39,6 +40,13 @@ const POSTERS: Poster[] = [
     alt: "Cartaz do projeto social Cesta Verde do Instituto das Nações: toda quinta-feira, mais de 400 famílias contempladas",
     w: 899,
     h: 1600,
+  },
+  {
+    src: midia.url,
+    title: "Ministério de Mídia",
+    alt: "Cartaz do Ministério de Mídia da Igreja Deus das Nações com uma câmera fotográfica ao centro",
+    w: 640,
+    h: 640,
   },
   {
     src: oferte.url,
