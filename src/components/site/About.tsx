@@ -1,5 +1,5 @@
-import comunhaoImg from "@/assets/comunhao.jpg";
-import cultoImg from "@/assets/culto.jpg";
+import adoracao from "@/assets/photos/adoracao.jpg.asset.json";
+import comunhao from "@/assets/photos/comunhao-maos.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 export function About() {
@@ -15,8 +15,8 @@ export function About() {
           <Reveal className="relative ml-auto w-[78%]">
             <div className="absolute -left-6 -top-6 h-32 w-32 border-l border-t border-gold/60" />
             <img
-              src={cultoImg}
-              alt="Ministração de louvor durante o culto"
+              src={adoracao.url}
+              alt="Jovem de olhos fechados e mãos abertas em adoração durante o culto"
               width={1024}
               height={1280}
               loading="lazy"
@@ -25,8 +25,8 @@ export function About() {
           </Reveal>
           <Reveal delay={0.2} className="absolute -bottom-12 left-0 w-[55%]">
             <img
-              src={comunhaoImg}
-              alt="Membros da igreja em momento de comunhão e abraços após o culto"
+              src={comunhao.url}
+              alt="Duas pessoas de mãos dadas em oração diante do telão durante o culto"
               width={1280}
               height={960}
               loading="lazy"

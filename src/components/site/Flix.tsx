@@ -1,6 +1,6 @@
 import { Play, Youtube } from "lucide-react";
 
-import flixImg from "@/assets/iddnsflix-bg.jpg";
+import flixPhoto from "@/assets/photos/palco-transmissao.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { CHURCH } from "@/lib/church";
 import { Reveal } from "./Reveal";
@@ -13,10 +13,10 @@ export function Flix() {
       className="relative isolate flex min-h-[80vh] items-center overflow-hidden py-24"
     >
       <img
-        src={flixImg}
-        alt="Bíblia aberta sobre o púlpito com câmera de transmissão ao fundo"
-        width={1920}
-        height={1088}
+        src={flixPhoto.url}
+        alt="Pregador no palco da IDDNS com a câmera de transmissão ao vivo à direita"
+        width={1280}
+        height={720}
         loading="lazy"
         className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
       />
