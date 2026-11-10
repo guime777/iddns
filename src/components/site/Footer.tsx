@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-10 pt-20 sm:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo />
+            <Logo className="h-16" />
             <p className="mt-6 font-display text-2xl leading-snug text-foreground">{CHURCH.name}</p>
             <p className="mt-4 flex gap-3 text-sm leading-relaxed text-muted-foreground">
               <MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
