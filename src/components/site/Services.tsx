@@ -27,8 +27,9 @@ export function Services() {
           {SERVICES.map((s, i) => {
             const Icon = s.online ? MonitorPlay : Church;
             return (
-              <Reveal key={s.day} delay={i * 0.1} className="h-full">
-                <li
+              <li key={s.day} className="h-full">
+                <Reveal delay={i * 0.1} className="h-full">
+                <div
                   className={cn(
                     "group relative flex h-full flex-col p-8 transition-colors duration-500 sm:p-10",
                     s.online ? "bg-ink" : "bg-navy hover:bg-navy-soft",
@@ -58,8 +59,9 @@ export function Services() {
                     {s.time}
                   </p>
                   <span className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                </li>
-              </Reveal>
+                </div>
+                </Reveal>
+              </li>
             );
           })}
         </ul>
