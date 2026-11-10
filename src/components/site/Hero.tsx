@@ -33,7 +33,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-hero-overlay" />
 
-      <div className="mx-auto max-w-5xl px-6 pb-16 pt-32 text-center">
+      <div className="mx-auto max-w-5xl px-6 pb-20 pt-32 text-center sm:pb-32">
         <motion.p className="eyebrow" {...fade(0.2)}>
           <span className="gold-rule mr-4 hidden align-middle sm:inline-block" />
           Igreja Deus das Nações
