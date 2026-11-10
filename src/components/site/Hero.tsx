@@ -35,9 +35,9 @@ export function Hero() {
 
       <div className="mx-auto max-w-5xl px-6 pb-16 pt-32 text-center">
         <motion.p className="eyebrow" {...fade(0.2)}>
-          <span className="gold-rule mr-4 align-middle" />
+          <span className="gold-rule mr-4 hidden align-middle sm:inline-block" />
           Igreja Deus das Nações
-          <span className="gold-rule ml-4 align-middle" />
+          <span className="gold-rule ml-4 hidden align-middle sm:inline-block" />
         </motion.p>
 
         <motion.h1
