@@ -37,7 +37,11 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#inicio" aria-label="Igreja Deus das Nações — início" onClick={() => setOpen(false)}>
+        <a
+          href="#inicio"
+          aria-label="Igreja Deus das Nações — início"
+          onClick={() => setOpen(false)}
+        >
           <Logo />
         </a>
 

@@ -29,37 +29,37 @@ export function Services() {
             return (
               <li key={s.day} className="h-full">
                 <Reveal delay={i * 0.1} className="h-full">
-                <div
-                  className={cn(
-                    "group relative flex h-full flex-col p-8 transition-colors duration-500 sm:p-10",
-                    s.online ? "bg-ink" : "bg-navy hover:bg-navy-soft",
-                  )}
-                >
-                  <div className="flex items-center justify-between">
-                    <Icon className="size-6 text-gold" strokeWidth={1.4} aria-hidden="true" />
-                    <span
-                      className={cn(
-                        "rounded-full px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.25em]",
-                        s.online
-                          ? "bg-gold text-primary-foreground"
-                          : "border border-foreground/20 text-foreground/70",
-                      )}
-                    >
-                      {s.online ? "Online" : "Presencial"}
-                    </span>
+                  <div
+                    className={cn(
+                      "group relative flex h-full flex-col p-8 transition-colors duration-500 sm:p-10",
+                      s.online ? "bg-ink" : "bg-navy hover:bg-navy-soft",
+                    )}
+                  >
+                    <div className="flex items-center justify-between">
+                      <Icon className="size-6 text-gold" strokeWidth={1.4} aria-hidden="true" />
+                      <span
+                        className={cn(
+                          "rounded-full px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.25em]",
+                          s.online
+                            ? "bg-gold text-primary-foreground"
+                            : "border border-foreground/20 text-foreground/70",
+                        )}
+                      >
+                        {s.online ? "Online" : "Presencial"}
+                      </span>
+                    </div>
+                    <p className="mt-12 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                      {s.day}
+                    </p>
+                    <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-foreground">
+                      {s.name}
+                    </h3>
+                    <p className="mt-auto flex items-center gap-2 pt-10 font-display text-5xl font-medium text-foreground">
+                      <Clock className="size-4 text-gold" aria-hidden="true" />
+                      {s.time}
+                    </p>
+                    <span className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                   </div>
-                  <p className="mt-12 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-                    {s.day}
-                  </p>
-                  <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-foreground">
-                    {s.name}
-                  </h3>
-                  <p className="mt-auto flex items-center gap-2 pt-10 font-display text-5xl font-medium text-foreground">
-                    <Clock className="size-4 text-gold" aria-hidden="true" />
-                    {s.time}
-                  </p>
-                  <span className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                </div>
                 </Reveal>
               </li>
             );

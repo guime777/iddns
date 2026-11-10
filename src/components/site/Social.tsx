@@ -52,7 +52,9 @@ export function Social() {
                   <p className="mt-8 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
                     {platform}
                   </p>
-                  <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">{title}</h3>
+                  <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">
+                    {title}
+                  </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{meta}</p>
                   <Button asChild variant="goldOutline" size="xl" className="mt-10 w-full">
                     <a href={url} target="_blank" rel="noopener noreferrer">

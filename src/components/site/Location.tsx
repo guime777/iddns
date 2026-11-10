@@ -39,7 +39,10 @@ export function Location() {
 
         <Reveal delay={0.15} className="lg:col-span-7">
           <div className="relative">
-            <div className="absolute -inset-3 rounded-sm border border-gold/25" aria-hidden="true" />
+            <div
+              className="absolute -inset-3 rounded-sm border border-gold/25"
+              aria-hidden="true"
+            />
             <iframe
               title="Mapa da Igreja Deus das Nações em Sobradinho II, Brasília – DF"
               src={CHURCH.mapsEmbed}

@@ -10,9 +10,12 @@ export function Contribute() {
   const [status, setStatus] = useState<"idle" | "copied" | "error">("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => () => {
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
+  useEffect(
+    () => () => {
+      if (timer.current) clearTimeout(timer.current);
+    },
+    [],
+  );
 
   const handleCopy = async () => {
     const ok = await copyText(CHURCH.pix);
@@ -78,9 +81,16 @@ export function Contribute() {
                 </>
               )}
             </Button>
-            <p id="pix-status" role="status" aria-live="polite" className="mt-4 min-h-5 text-center text-sm">
+            <p
+              id="pix-status"
+              role="status"
+              aria-live="polite"
+              className="mt-4 min-h-5 text-center text-sm"
+            >
               {status === "copied" && (
-                <span className="text-gold-soft">Chave PIX copiada para a área de transferência.</span>
+                <span className="text-gold-soft">
+                  Chave PIX copiada para a área de transferência.
+                </span>
               )}
               {status === "error" && (
                 <span className="text-destructive">

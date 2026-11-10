@@ -49,9 +49,9 @@ export function About() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-8 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              A Igreja Deus das Nações é um lugar de adoração, busca pela presença de Deus, comunhão e
-              transformação de vidas. Aqui, pessoas de diferentes histórias se encontram com um mesmo
-              propósito: viver a fé e conhecer cada vez mais a presença do Senhor.
+              A Igreja Deus das Nações é um lugar de adoração, busca pela presença de Deus, comunhão
+              e transformação de vidas. Aqui, pessoas de diferentes histórias se encontram com um
+              mesmo propósito: viver a fé e conhecer cada vez mais a presença do Senhor.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
