@@ -72,7 +72,7 @@ export function Hero() {
       <a
         href="#nossa-igreja"
         aria-label="Rolar para a próxima seção"
-        className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.6rem] font-semibold uppercase tracking-[0.35em] text-foreground/60 transition-colors hover:text-gold"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 sm:flex flex-col items-center gap-3 text-[0.6rem] font-semibold uppercase tracking-[0.35em] text-foreground/60 transition-colors hover:text-gold"
       >
         <span className="flex h-10 w-6 justify-center rounded-full border border-foreground/30 pt-2">
           <span className="block size-1.5 rounded-full bg-gold animate-scroll-dot" />
