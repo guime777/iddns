@@ -10,9 +10,9 @@ describe("Informações da igreja", () => {
 
   it("lista os cultos com os horários informados", () => {
     expect(SERVICES.map((s) => [s.day, s.name, s.time])).toEqual([
-      ["Terça-feira", "Culto de Adoração", "19h30"],
-      ["Sexta-feira", "Culto de Fé", "19h30"],
-      ["Domingo", "Culto de Celebração", "19h30"],
+      ["Terça-feira", "Terça Profética", "19h30"],
+      ["Sexta-feira", "Sexta da Libertação", "19h30"],
+      ["Domingo", "Domingo pela Família", "19h30"],
       ["Segunda-feira", "IDDNSFLIX", "22h00"],
     ]);
   });
