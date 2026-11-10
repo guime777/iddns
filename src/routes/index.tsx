@@ -5,6 +5,7 @@ import { Agenda } from "@/components/site/Agenda";
 import { Contribute } from "@/components/site/Contribute";
 import { Flix } from "@/components/site/Flix";
 import { Footer } from "@/components/site/Footer";
+import { Gallery } from "@/components/site/Gallery";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Location } from "@/components/site/Location";
@@ -77,6 +78,7 @@ function Index() {
         <Services />
         <Agenda />
         <Flix />
+        <Gallery />
         <Social />
         <Contribute />
         <Location />

@@ -18,7 +18,7 @@ export function Flix() {
         width={1280}
         height={720}
         loading="lazy"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
       />
       <div className="absolute inset-0 -z-10 bg-flix-overlay" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background to-transparent" />
