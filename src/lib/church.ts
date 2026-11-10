@@ -36,8 +36,8 @@ export type Service = {
 };
 
 export const SERVICES: Service[] = [
-  { day: "Terça-feira", name: "Culto de Adoração", time: "19h30" },
-  { day: "Sexta-feira", name: "Culto de Fé", time: "19h30" },
-  { day: "Domingo", name: "Culto de Celebração", time: "19h30" },
+  { day: "Terça-feira", name: "Terça Profética", time: "19h30" },
+  { day: "Sexta-feira", name: "Sexta da Libertação", time: "19h30" },
+  { day: "Domingo", name: "Domingo pela Família", time: "19h30" },
   { day: "Segunda-feira", name: "IDDNSFLIX", time: "22h00", online: true },
 ];
