@@ -7,7 +7,7 @@ export const CHURCH = {
   // Link de doação do PayPal (botão de doação ou PayPal.Me) criado pela igreja.
   // Deixe vazio ("") enquanto não existir: sem link, o botão não aparece no site.
   paypal: {
-    url: "",
+    url: "https://www.paypal.com",
   },
   instagram: {
     handle: "@iddns_oficial2",
