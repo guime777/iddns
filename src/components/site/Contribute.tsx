@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { Check, Copy, HeartHandshake } from "lucide-react";
+import { Check, Copy, CreditCard, ExternalLink, HeartHandshake } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CHURCH } from "@/lib/church";
 import { copyText } from "@/lib/clipboard";
+import { payPalDonateUrl } from "@/lib/paypal";
 import { Reveal } from "./Reveal";
 
 export function Contribute() {
   const [status, setStatus] = useState<"idle" | "copied" | "error">("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const paypalUrl = payPalDonateUrl();
 
   useEffect(
     () => () => {
@@ -56,48 +58,72 @@ export function Contribute() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="rounded-sm border border-gold/30 bg-ink/60 p-8 shadow-card backdrop-blur sm:p-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">PIX · CNPJ</p>
-            <p className="mt-4 select-all break-all font-display text-4xl font-semibold tracking-wide text-foreground sm:text-5xl">
-              {CHURCH.pix}
-            </p>
-            <p className="mt-3 text-sm text-muted-foreground">{CHURCH.name}</p>
-            <div className="my-8 h-px w-full bg-gold/20" />
-            <Button
-              type="button"
-              variant="gold"
-              size="xl"
-              className="w-full"
-              onClick={handleCopy}
-              aria-describedby="pix-status"
-            >
-              {status === "copied" ? (
-                <>
-                  <Check aria-hidden="true" /> Chave copiada!
-                </>
-              ) : (
-                <>
-                  <Copy aria-hidden="true" /> Copiar chave PIX
-                </>
-              )}
-            </Button>
-            <p
-              id="pix-status"
-              role="status"
-              aria-live="polite"
-              className="mt-4 min-h-5 text-center text-sm"
-            >
-              {status === "copied" && (
-                <span className="text-gold-soft">
-                  Chave PIX copiada para a área de transferência.
-                </span>
-              )}
-              {status === "error" && (
-                <span className="text-destructive">
-                  Não foi possível copiar. Selecione a chave acima e copie manualmente.
-                </span>
-              )}
-            </p>
+          <div className="space-y-6">
+            <div className="rounded-sm border border-gold/30 bg-ink/60 p-8 shadow-card backdrop-blur sm:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                PIX · CNPJ
+              </p>
+              <p className="mt-4 select-all break-all font-display text-4xl font-semibold tracking-wide text-foreground sm:text-5xl">
+                {CHURCH.pix}
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">{CHURCH.name}</p>
+              <div className="my-8 h-px w-full bg-gold/20" />
+              <Button
+                type="button"
+                variant="gold"
+                size="xl"
+                className="w-full"
+                onClick={handleCopy}
+                aria-describedby="pix-status"
+              >
+                {status === "copied" ? (
+                  <>
+                    <Check aria-hidden="true" /> Chave copiada!
+                  </>
+                ) : (
+                  <>
+                    <Copy aria-hidden="true" /> Copiar chave PIX
+                  </>
+                )}
+              </Button>
+              <p
+                id="pix-status"
+                role="status"
+                aria-live="polite"
+                className="mt-4 min-h-5 text-center text-sm"
+              >
+                {status === "copied" && (
+                  <span className="text-gold-soft">
+                    Chave PIX copiada para a área de transferência.
+                  </span>
+                )}
+                {status === "error" && (
+                  <span className="text-destructive">
+                    Não foi possível copiar. Selecione a chave acima e copie manualmente.
+                  </span>
+                )}
+              </p>
+            </div>
+
+            {paypalUrl && (
+              <div className="rounded-sm border border-gold/20 bg-ink/40 p-7 backdrop-blur sm:p-9">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                  PayPal · Cartão internacional
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Você está em outro país? Doe pelo PayPal com cartão de crédito ou débito, na
+                  moeda do seu cartão. O PIX acima só funciona para contas no Brasil.
+                </p>
+                <Button asChild variant="goldOutline" size="xl" className="mt-7 w-full">
+                  <a href={paypalUrl} target="_blank" rel="noopener noreferrer">
+                    <CreditCard aria-hidden="true" />
+                    Doar com PayPal
+                    <ExternalLink aria-hidden="true" className="size-3.5" />
+                    <span className="sr-only"> (abre em uma nova aba)</span>
+                  </a>
+                </Button>
+              </div>
+            )}
           </div>
         </Reveal>
       </div>

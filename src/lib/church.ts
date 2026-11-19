@@ -4,6 +4,11 @@ export const CHURCH = {
   address: "AR 16 – Sobradinho II, Brasília – DF",
   cep: "73062-215",
   pix: "22.622.779/0001-10",
+  // Link de doação do PayPal (botão de doação ou PayPal.Me) criado pela igreja.
+  // Deixe vazio ("") enquanto não existir: sem link, o botão não aparece no site.
+  paypal: {
+    url: "",
+  },
   instagram: {
     handle: "@iddns_oficial2",
     followers: "3.160 seguidores",
